@@ -1,0 +1,166 @@
+body{
+    background-image: url("https://thumbs.gfycat.com/WanBriefHarborseal-small.gif"); 
+    }
+    .grid_item{
+        border: 3px double black;
+        text-align: center;
+        border-radius: 15px;
+        padding: 10px;
+    /*     margin: 5px; */
+    }
+    #container{
+      display: grid;
+      grid-gap: 2px;
+      grid-auto-rows: minmax(100px, auto);
+    }
+    #header{
+      opacity: 0.8;
+    filter: alpha(opacity=40);
+      grid-column: 2/7;
+      grid-row: 1/2;
+      background-color: #4E4547;
+    }
+    #aside{
+      grid-column: 1/2;
+      grid-row: 1/6;
+      background: #f6d4f4;
+    
+    }
+    #aboutme{
+       background-image: url("https://i.gifer.com/embedded/download/6aDd.gif");opacity: 0.8;
+    filter: alpha(opacity=40);
+      grid-column: 2/7;
+      grid-row: 2/4;
+    }
+    #education{
+       background-image: url("https://i.gifer.com/embedded/download/6aDd.gif");opacity: 0.8;
+    filter: alpha(opacity=40);
+      grid-column: 2/7;
+      grid-row: 4/5;
+    }
+    #workexperience{
+      background-image: url("https://i.gifer.com/embedded/download/6aDd.gif");
+      grid-column: 2/7;
+      grid-row: 5/6;
+      opacity: 0.8;
+    filter: alpha(opacity=40);
+    }
+    /* header start */
+    h1{
+      color: #f5e2e4;
+      margin:0;
+      text-shadow: 2px 2px 3px #F1F;
+      font-size: 30px;
+      margin-bottom: 20px;
+      padding-top: 22px;
+    }
+    h2{
+      color: #000;
+      margin:0;
+      text-shadow: 2px 2px 3px #F1F;
+      font-size: 25px;
+      margin-bottom: 0px;
+      padding-top: 0px;
+    }
+      /* header end */
+    
+    /* side start */
+    .photo{
+      border: 3px solid #4e4547;
+      display:block;
+      width: 130px;height: 130px;
+      margin: auto;
+      margin-top:0px;
+      border-radius: 100%;
+      background-color: #fff;
+      
+    }
+    .info{
+    }
+    .info-content{
+      margin: 20px 0;
+      width: 100%;
+    }
+    .matn{
+      width: 100%;
+        text-align: left;
+      font-size: 18px;
+    }
+    .titr{
+      width: 100%;
+       color: black;
+      font-size: 12px;
+      text-shadow: 2px 2px 3px #F1F;
+    }
+    .info-title{
+      width: 100%;height: 30px;
+      text-align: left;
+    }
+    .info-block{
+      padding: 8px 10px;
+      text-align: left;
+      width: 100%;
+    }
+    .icon{
+      display: inline-block;
+      width: 30px;height: 30px;
+      background-color: #455046;
+      border-radius:100%;
+    }
+    .info-right{
+      display: inline-block;
+      text-align: left;
+    }
+    .info-top{
+      color: black;
+      font-size: 18px;
+      text-shadow: 1px 1px 1px #F1F;
+    }
+    .space{
+     padding: 8px 0px 0px 0px;
+    }
+    .info-bottom{
+      font-size: 16px;
+    }
+    /* side end */
+    
+    /* footer start */
+    #contact{
+      color: #FFF;
+      grid-column: 1/7;
+      grid-row: 7/6;
+      background-color: #4E4547;
+      text-shadow: 1px 1px 1px #F1F;
+      opacity: 0.8;
+    filter: alpha(opacity=40);
+    }
+    /* footer end */
+    .copyright {
+        text-align: center;
+        font-size: 8pt;
+        padding:5px;
+        color: white;
+    }
+    /* table start*/
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td{
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 6px;
+    }
+    th {
+      border: 1px solid #dddddd;
+      text-align: center;
+      padding: 6px;
+    }
+    
+    tr:hover{
+      background-color: #f5e2e4;
+    
+    }
+    /* table end*/
