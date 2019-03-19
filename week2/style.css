@@ -1,0 +1,151 @@
+*, *::after {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+  /*  background: radial-gradient(#fff,#ddd) fixed; */
+    max-width: 90%;
+    margin:0 auto;
+    background: url(http://alena-vysotskaya.ru/images/500/DSC100514700.jpg) no-repeat fixed;
+    background-size: cover;
+}
+    
+    /* inside grid items */
+h1, h2, h3, p {
+    text-align: center;
+   color: white;
+    margin-bottom: 30px;
+}
+h1, h2{margin-top:50px;}
+h3 {
+    height: 50px;
+    padding:10px 0;
+    background:linear-gradient(to bottom, #030561f6, );
+}
+p {padding:10px;}
+/*end of general styling*/ 
+
+    /* Grid container */
+#grid-floats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+#grid-floats li {
+    background: linear-gradient(to top, #0a28ace0, transparent);
+    transform: scale(0.9);
+    transition: transform 300ms;
+    border: 5px rgb(14, 9, 9);
+    border-style: solid;
+    background: linear-gradient(to top, #020472de, transparent);
+}
+    
+li img  {
+    width: 70%;
+    transform: translate(20%);
+    margin-top: 10px;
+}
+
+/* desktop view */
+@media only screen and (min-width:769px) {
+    #grid-floats li:nth-child(1) {
+        background-color: #0411beef;
+        grid-column: span 2;
+    }
+}
+/* tablet view */
+@media only screen and (max-width: 768px) {
+    #grid-floats {grid-template-columns: 1fr 1fr 1fr;}
+    #grid-floats li:nth-child(1) {
+        background-color: #990199c7;
+        grid-column: 1 / 2;
+    }
+    #grid-floats li:nth-child(2) {
+        background-color: #2860a960;    
+        grid-column: 3 / 3;
+    }
+}
+/* mobile view */
+@media only screen and (max-width: 480px) {
+    #grid-floats {grid-template-columns: 1fr 1fr;}
+    #grid-floats li:nth-child(1) {grid-column: 1 / span 2;}
+    #grid-floats li:nth-child(2) {
+        background-color:initial;
+        grid-column: 1 / 1;
+    }    
+}
+   
+#grid-floats li:hover {
+    box-shadow: 0 5px 10px 0px #02640f;
+    transform: scale(1);
+}
+    
+    /* Flexbox container */
+#grid-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+}
+/* flex items*/
+#grid-flex li {
+    max-width: 25%; /*every flex item will take quarter of the available width*/
+    flex-grow: 1;	
+    border: 5px #0e0b0b;
+    border-style: solid;
+    background: linear-gradient(to top, rgba(4, 7, 138, 0.904), transparent);
+    transform: scale(0.9);
+    transition: transform 300ms;
+}
+    
+/* desktop view */
+@media only screen and (min-width:769px) {
+    #grid-flex li:nth-child(1) {
+        background-color: #1d048fda;
+        max-width: 50%;
+    }
+}
+/* tablet view */
+@media only screen and (max-width: 768px) {
+    #grid-flex li {max-width: 33.3%;} /* 100/3=33.3 */
+    #grid-flex li:nth-child(1) {
+        background-color: rgba(116, 2, 100, 0.952);
+        max-width: 50%;
+    }
+    #grid-flex li:nth-child(2) {
+        background-color: #a70992d7;
+        max-width: 50%;
+    }
+}
+/* mobile view */
+@media only screen and (max-width: 480px) {
+    #grid-flex li {max-width: 50%;} /* 100/2=50 */
+    #grid-flex li:nth-child(1) {max-width: 100%;}
+    #grid-flex li:nth-child(2) {background-color: initial;}
+}
+    
+#grid-flex li:hover {
+    box-shadow: 0 5px 10px 0px black;
+    transform: scale(1);
+}
+section:nth-child(1) {border-top: 2px solid #030202;}
+section:nth-child(2) {border-top: 2px solid #0a0707;}
+
+#grid-flex::after {
+    content: "Zeinab Shadab Shoar";
+    border-top: 3px solid #0c0707;
+    text-shadow: 0px 2px 20px #1ebcd1;
+    text-align: center;
+    padding: 1em 0;
+    width: 100vw;
+}
+/* Redefining some rules and values (no major changes) */
+    h1{color:#f1f1f1;margin-top:0; padding-top:25px;}
+    h2{color: #f5f7f7;}
+    h3{color: #fefeff;padding-top: 20px;}
+    p{color: white;}
+	
+  
