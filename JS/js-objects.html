@@ -4,37 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>JavaScriph Objects</title>
+    <title>JavaScript Objects</title>
 </head>
 <body>
 
-    <h1>JavaScript Objects</h1>
-<script>
-    // control +
-    // console.log("Hello Word");
-    const samad = {
-        firstname :"samad",
-        lastname : "rezaei",
-        country : "iran",
-        level : "advanced"
-    }
-    console.log( "Hello " +samad.firstname + " " + samad.firstname + "!" );
-    //output => "Hello samad rerzaei"
+    <h1>JavaScript Objects - Basics</h1>
+    <div>
+        This is a <mark>highlighted</mark> term.
+    </div>
 
-    //change your level to ...
-    samad.level = "begginer";
-    //use the command:
-    document.write("<span style='background-color:pink'>" +samad.firstname + " is an " + samad.level + "level <strong> developer</strong>. </span>");
-    document.write("<p>" + (5*6) + "</p>" );
-    //<p> + (30) + "</p>"
-    //"<p>30</p>"
-    //to display: "samad rezaei is an advenced level developer.
+    <script>
+        // TIP: Control + / to comment one or multiple lines of code
+        // console.log( "Hello World" );
+        const kostas = {
+            firstname: "Kostas",
+            lastname: "Minaidis",
+            country: "Greece",
+            level: "advanced"
+        }
+        console.log( "Hello " + kostas.firstname + " " + kostas.lastname + "!" );
+        // Output => "Hello Kostas Minaidis!"
+
+        // Change your level to ... 
+        kostas.level = "beginner";
+        // Use the command:
+        document.write( "<mark>" + kostas.firstname + " is an " + kostas.level + " level <strong>developer</strong>.</mark>" );
+        // To display: "Kostas Minaidis is an advanced level developer."
+
+    </script>
+    <script>
+        // All variables declared in the previous <script> is available to us in this <script> tag
+        // console.log( kostas );
+
+        // NOTES: Let's try to change the kostas variable value:
+        // kostas = 5; // This will produce the following error:
+        // Uncaught TypeError: Assignment to constant variable.
+
+        console.log( "Before new property:", kostas );
+        // Create a new Object property and assign a value:
+        kostas.school = "Social Hackers Academy";
+        console.log( "After new property:", kostas );
+
+        // Delete an Object property:
+        delete kostas.school;
+        console.log( "After deleting a property:", kostas );
+
+        // Accessing Object Properties:
+        kostas.firstname;       // Dot notation
+        kostas["firstname"];    // Bracket notation 
+        kostas['firstname'];    // Bracket notation
+
+        // Invalid property names (using dot notation):
+        // kostas.first name;
+        // kostas.first-name;
+        // kostas.first@name;
+        // kostas.76firstname;
+
+        // NOTE: The only valid special characters are: _ and $
+
+        // You can create and access properties with special characters
+        // only using the [ brackets ] notation
+        kostas["is this is a property name?"] = "YES";
+        console.log( kostas );
+        console.log( kostas["is this is a property name?"] );
 
 
-</script>
-<script>
-// samad = 5;
-</script>
-
+    </script>
+    
 </body>
 </html>
