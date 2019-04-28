@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript-week4</title>
+</head>
+<body>
+
+
+    <script>
+        let books = {
+    book1: { title: 'Animal Farm ', language: 'Language : English', author: 'George Orwell', img: 'https://www.openrightslibrary.com/wp-content/uploads/2017/06/animal-farm-ebook-George-Orwell.jpg' },
+    book2: { title: '1984', language: 'Language : English', author: 'George Orwell', img: 'https://freebooksummary.com/wp-content/uploads/2017/04/1984-book-cover.jpeg' },
+    book3: { title: 'Totem And Taboo', language: 'Language : English', author: 'Sigmund Freud ', img: 'https://img1.od-cdn.com/ImageType-400/6251-1/1FB/57A/0D/%7B1FB57A0D-60E1-4627-8B2E-8F534B5C03C0%7DImg400.jpg' },
+    book4: { title: 'Beyond Good And Evil', language: 'Language : English', author: 'Stephen Hawking', img: 'https://img1.od-cdn.com/ImageType-400/2985-1/A3E/25B/22/%7BA3E25B22-E355-4763-91BF-C806F87A5F07%7DImg400.jpg' },
+    book5: { title: 'The Birth of Tragedy', language: 'Language : English', author: 'Friedrich Nietzsche ', img: 'https://images-na.ssl-images-amazon.com/images/I/51JDf0%2BDIOL._SX346_BO1,204,203,200_.jpg' },
+    book6: { title: 'Uncanny', language: 'Language : English', author: 'Paul Jennings ', img: 'https://ia800801.us.archive.org/zipview.php?zip=/3/items/olcovers687/olcovers687-L.zip&file=6875776-L.jpg' },
+    book7: { title: 'Studies on Hysteria', language: 'Language : English', author: 'Sigmund Freud ', img: 'https://pictures.abebooks.com/isbn/9780465082759-uk.jpg' },
+    book8: { title: 'On Narcissism ', language: 'Language : English', author: 'Sigmund Freud', img: 'https://images-na.ssl-images-amazon.com/images/I/51-N7cdikQL._SX322_BO1,204,203,200_.jpg' },
+    book9: { title: 'Mind Book', language: 'Language : English', author: 'Kevin Horsley', img: 'https://images.gr-assets.com/books/1429909104l/25421207.jpg' },
+    book10: { title: 'God Created the Integers', language: 'Language : English', author: 'Stephen Hawking', img: 'https://img1.od-cdn.com/ImageType-400/0111-1/874/B9F/B9/%7B874B9FB9-1E4F-4EAA-BA91-E98CEF19936C%7DImg400.jpg' }
+}
+
+
+
+let Cover = function listgenerator(Obj) {
+    for (let i = 0; i < Object.entries(Obj).length; i++) {
+        let ul = document.createElement('ul');
+        document.body.appendChild(ul);
+
+        let li = document.createElement('li');
+        ul.appendChild(li);
+
+        let h2 = document.createElement('h2');
+        li.appendChild(h2);
+        h2.textContent = Object.entries(Obj)[i][1].title;
+
+        let h4 = document.createElement('h4');
+        li.appendChild(h4);
+        h4.textContent = Object.entries(Obj)[i][1].language;
+
+        let h3 = document.createElement('h3');
+        li.appendChild(h3);
+        h3.textContent = Object.entries(Obj)[i][1].author;
+
+        let img = document.createElement('img');
+        li.appendChild(img);
+        img.setAttribute('src', Object.entries(Obj)[i][1].img);
+
+        //*** Css Beutify Codes */
+
+        document.body.style.display = 'flex';
+        document.body.style.flexFlow = 'row wrap';
+        document.body.style.justifyContent = 'space-around';
+        document.body.style.fontFamily = 'URW Chancery L, cursive';
+        document.body.style.backgroundImage = "url('http://www.myfreetextures.com/wp-content/uploads/2011/06/another-rough-old-and-worn-parchment-paper.jpg')";
+
+        ul.style.listStyle = 'none';
+        ul.style.padding = '0';
+        ul.style.margin = '1vw';
+        ul.style.width = '300px';
+        ul.style.maxHeight = '500px';
+        ul.style.overflow = 'hidden';
+        ul.style.border = '2px groove brown';
+
+        li.style.display = 'flex';
+        li.style.flexDirection = 'column';
+
+        h2.style.margin = '0';
+        h2.style.padding = '0.4vw';
+        h2.style.fontSize = '1.5vw';
+        h2.style.backgroundColor ='lightblue';
+        h2.style.textAlign = 'center';
+
+
+        h3.style.margin = '0';
+        h3.style.padding = '0.5vw';
+        h3.style.fontSize = '1.3vw';
+        h3.style.backgroundColor ='yellow';
+
+
+        h4.style.margin = '0';
+        h4.style.padding = '0.5vw';
+        h4.style.fontSize = '1vw';
+        h4.style.backgroundColor ='lightgreen';
+
+        img.style.objectFit = 'cover';
+    }
+}
+Cover(books);
+
+    </script>
+
+
+</body>
+</html>
