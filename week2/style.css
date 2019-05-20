@@ -1,34 +1,57 @@
-*, *::after {
+*, *::before, *::after{
     list-style-type: none;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(0, 15, 59);
 }
-body {
-    max-width: 90%;
-    margin:0 auto;
-    background: url(http://alena-vysotskaya.ru/images/500/DSC100514700.jpg) no-repeat fixed;
-    background-size: cover;
+body{
+    max-width: 87%;
+    margin: 0 auto;
 }
-
  h2, h3 {
-    color: 	#76bdff;
+    color: 	rgb(118, 189, 255);
     margin: 3px;
 }
 h3 {
     text-align: center;
 }
 h1 {
-    color: rgb(207, 236, 243);
+    color: rgba(0, 165, 0, 0.7);
     text-align: center;
     margin: 10px 0;
     font-size: 50px;
     padding-left: 2%;
 }
+h1:hover{
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-4px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(20px, 0, 0);
+    }
+  }
 h2{
-    text-align: center;
+    background-image: linear-gradient(to right, rgb(51, 53, 97) , rgb(52, 160, 57, 0));
     padding: 4px 0 4px 2%;
+    animation-duration: 4s;
+    animation-name: slidein; 
     margin-top: 30px;
 }
 h3{
@@ -53,13 +76,13 @@ p{
     flex-wrap: wrap;
 }
 #grid-flex::after {
-    content: "Zeinab Shadab Shoar";
-    border-top: 1px solid #000000d0;
-    text-shadow: 0px 0px 40px #bd0a9f;
+    content: "©2019 Samad's Web. All rights reserved.";
+    border-top: 1px solid rgba(0, 160, 0, 0.5);
+    text-shadow: 0px 0px 40px rgb(0, 165, 0);
     text-align: center;
     padding: 1em 0;
     width: 900vw;
-    color: #f8fff8;
+    color: rgb(0, 165, 0);
 }
 /* item container floats & Flex */
 .grid-item:nth-child(1) {
@@ -69,41 +92,45 @@ p{
     
     border-radius: 7px;
     color: rgb(255, 255, 255);
-    border: 4px  solid #050a0af5;
+    border: 4px  solid rgb(0, 255, 255, .3);
+    transform: scale(0.9);
+    transition: transform 300ms; 
     float: left;
     width: 25%;
 
 }
 .grid-item:hover{
-    border: 4px  solid 0ff#d109a6;
-    box-shadow: 1px 1px 15px #e715cb;
+    border: 4px  solid rgb(0, 255, 255);
+    box-shadow: 1px 1px 15px rgb(0, 255, 255);
     transform: scale(.9);
-    }
+    color: 	rgb(0, 165, 0);
+    transform: rotate(1.5deg);
+}
 .grid-item img{
     width: 70%;
     transform: translate(20%);
     background-color: white;
-    border: 2px solid #c8c8c8;
+    border: 2px solid rgb(200, 200, 200);
     border-radius: 7px;
-    box-shadow: 1px 2px 9px #bfbfbf;
+    box-shadow: 1px 2px 9px rgb(191, 191, 191);
 }
-/* view desktop */
-@media only screen and (max-width: 900px) and (min-width: 1800px) {
+/* view 1 */
+@media only screen and (max-width: 1800px){
     .grid-item:nth-child(1) img {
         width: 50%;
     }
 }
-/* view tablet */
+/* view 2 */
 @media only screen and (max-width:650px){
     .grid-item:nth-child(2) {
         width: 50%;
     }
     .grid-item:nth-child(n+3){
-       width: 50%; 
+       width: 33%; 
     }
 }
 
-/*view mobile */
+/*view 3 */
 @media only screen and (max-width: 450px) {
     .grid-item:nth-child(1) {
         width: 100%;
@@ -113,4 +140,22 @@ p{
         height: 36.5rem;
     }
 }
-  
+
+/*sources:*/
+    /* 
+    https://www.w3schools.com/css/css3_gradients.asp
+    https://www.youtube.com/watch?v=k32voqQhODc
+    https://www.youtube.com/watch?v=JJSoEo8JSnc
+    https://teamtreehouse.com/community/after-before-boxsizingborderbox
+    https://drafts.csswg.org/css-shadow-parts/#part
+    https://www.w3schools.com/css/css3_flexbox.asp#flex-wrap
+    https://www.w3schools.com/css/css_background.asp
+    https://www.w3schools.com/css/css_border.asp
+    https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+    https://www.w3schools.com/css/css3_mediaqueries.asp
+    https://www.w3schools.com/cssref/pr_border-style.asp
+    https://www.w3schools.com/cssref/playit.asp?filename=playcss_border-style
+    https://www.w3schools.com/cssref/css3_pr_animation.asp
+    https://www.w3schools.com/cssref/sel_after.asp
+    https://www.w3schools.com/cssref/pr_text_color.asp
+     */
